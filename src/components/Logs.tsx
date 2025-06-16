@@ -8,34 +8,32 @@ const Logs = () => {
         </h2>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Estrutura de pastas */}
+          {/* Estrutura de logs */}
           <div className="border border-tech-green bg-tech-dark p-6">
             <h3 className="text-tech-green font-mono font-bold text-xl mb-4">
-              ESTRUTURA DE ARQUIVOS CRIADA
+              LOCALIZAÇÃO DOS LOGS
             </h3>
             
             <div className="code-block bg-tech-black text-xs">
               <div className="font-mono text-tech-green">
                 <div>/sdcard/</div>
-                <div>├── flow_backup/</div>
-                <div>│   ├── system_apps_backup.txt</div>
-                <div>│   ├── build_prop_backup.txt</div>
-                <div>│   ├── settings_backup.db</div>
-                <div>│   └── kernel_params_backup.txt</div>
-                <div>├── flow_logs/</div>
-                <div>│   ├── execution_YYYYMMDD_HHMMSS.log</div>
-                <div>│   ├── debloat_removed_apps.log</div>
-                <div>│   ├── performance_changes.log</div>
-                <div>│   └── errors.log</div>
-                <div>└── flow_booster.sh</div>
+                <div>└── Logs/</div>
+                <div>    └── AndroidOptimizer_LOG.txt</div>
+              </div>
+            </div>
+            
+            <div className="mt-4 text-tech-white text-sm">
+              <p className="mb-2">Todos os logs ficam no arquivo:</p>
+              <div className="code-block bg-tech-black">
+                <code className="text-tech-green">/sdcard/Logs/AndroidOptimizer_LOG.txt</code>
               </div>
             </div>
           </div>
           
-          {/* Sistema de logs */}
+          {/* Sistema de backup */}
           <div className="border border-tech-blue bg-tech-dark p-6">
             <h3 className="text-tech-blue font-mono font-bold text-xl mb-4">
-              SISTEMA DE LOGS AVANÇADO
+              SISTEMA DE BACKUP AUTOMÁTICO
             </h3>
             
             <div className="space-y-4 text-tech-white text-sm">
@@ -46,12 +44,12 @@ const Logs = () => {
               
               <div>
                 <h4 className="text-tech-yellow font-mono font-bold">BACKUP AUTOMÁTICO</h4>
-                <p>Backup completo das configurações antes de qualquer alteração.</p>
+                <p>Configurações salvas antes de qualquer alteração.</p>
               </div>
               
               <div>
-                <h4 className="text-tech-yellow font-mono font-bold">RECOVERY SYSTEM</h4>
-                <p>Sistema de restauração para reverter alterações problemáticas.</p>
+                <h4 className="text-tech-yellow font-mono font-bold">COMANDO --reverse</h4>
+                <p>Sistema de restauração para reverter todas as alterações.</p>
               </div>
             </div>
           </div>
@@ -65,18 +63,20 @@ const Logs = () => {
           
           <div className="code-block">
             <div className="font-mono text-xs space-y-1">
-              <div className="text-tech-yellow">[2024-06-16 14:23:15] FLOW BOOSTER v2.1 - INICIANDO EXECUÇÃO</div>
-              <div className="text-tech-blue">[2024-06-16 14:23:16] [BACKUP] Criando backup do sistema...</div>
-              <div className="text-tech-green">[2024-06-16 14:23:18] [BACKUP] ✓ system_apps_backup.txt (1247 apps)</div>
-              <div className="text-tech-green">[2024-06-16 14:23:19] [BACKUP] ✓ build_prop_backup.txt (342 props)</div>
-              <div className="text-tech-blue">[2024-06-16 14:23:20] [OPTIMIZE] Aplicando tweaks de performance...</div>
-              <div className="text-tech-green">[2024-06-16 14:23:21] [OPTIMIZE] ✓ Kernel scheduler: CFQ → BFQ</div>
-              <div className="text-tech-green">[2024-06-16 14:23:22] [OPTIMIZE] ✓ Memory management optimized</div>
-              <div className="text-tech-blue">[2024-06-16 14:23:23] [DEBLOAT] Analisando bloatware...</div>
-              <div className="text-tech-green">[2024-06-16 14:23:25] [DEBLOAT] ✓ Removidos 43 apps desnecessários</div>
-              <div className="text-tech-red">[2024-06-16 14:23:26] [WARNING] App 'com.example.app' não encontrado</div>
-              <div className="text-tech-yellow">[2024-06-16 14:23:27] [SUCCESS] Otimização concluída em 12.4s</div>
-              <div className="text-tech-white">[2024-06-16 14:23:27] [INFO] Logs salvos em /sdcard/flow_logs/</div>
+              <div className="text-tech-yellow">[2024-06-16 14:23:15] FLOW BOOSTER v3.0 - INICIANDO --boost</div>
+              <div className="text-tech-blue">[2024-06-16 14:23:16] [BACKUP] Salvando configurações atuais...</div>
+              <div className="text-tech-green">[2024-06-16 14:23:18] [DESBLOAT] ✓ Detectada marca: Samsung</div>
+              <div className="text-tech-green">[2024-06-16 14:23:19] [DESBLOAT] ✓ Removidos 23 apps Samsung desnecessários</div>
+              <div className="text-tech-blue">[2024-06-16 14:23:20] [ANIMATIONS] Desativando animações do sistema...</div>
+              <div className="text-tech-green">[2024-06-16 14:23:21] [ANIMATIONS] ✓ Animações desativadas</div>
+              <div className="text-tech-blue">[2024-06-16 14:23:22] [DNS] Configurando AdGuard DNS...</div>
+              <div className="text-tech-green">[2024-06-16 14:23:23] [DNS] ✓ DNS privado ativado</div>
+              <div className="text-tech-blue">[2024-06-16 14:23:24] [DARKMODE] Forçando modo escuro...</div>
+              <div className="text-tech-green">[2024-06-16 14:23:25] [DARKMODE] ✓ Modo escuro ativado</div>
+              <div className="text-tech-blue">[2024-06-16 14:23:26] [RAM PLUS] Verificando suporte...</div>
+              <div className="text-tech-green">[2024-06-16 14:23:27] [RAM PLUS] ✓ RAM Plus ativado (4GB extra)</div>
+              <div className="text-tech-yellow">[2024-06-16 14:23:28] [SUCCESS] Otimização --boost concluída em 13.2s</div>
+              <div className="text-tech-white">[2024-06-16 14:23:28] [INFO] Log salvo em /sdcard/Logs/AndroidOptimizer_LOG.txt</div>
             </div>
           </div>
         </div>
@@ -87,22 +87,22 @@ const Logs = () => {
             <h4 className="text-tech-yellow font-mono font-bold mb-3">VISUALIZAR LOGS</h4>
             <div className="code-block text-xs bg-tech-black">
               <code className="text-tech-green">
-                # Ver último log<br/>
-                cat /sdcard/flow_logs/execution_latest.log<br/><br/>
-                # Ver apenas erros<br/>
-                cat /sdcard/flow_logs/errors.log
+                # Ver log completo<br/>
+                cat /sdcard/Logs/AndroidOptimizer_LOG.txt<br/><br/>
+                # Ver últimas 20 linhas<br/>
+                tail -20 /sdcard/Logs/AndroidOptimizer_LOG.txt
               </code>
             </div>
           </div>
           
           <div className="border border-tech-green bg-tech-dark p-4">
-            <h4 className="text-tech-green font-mono font-bold mb-3">RESTAURAR BACKUP</h4>
+            <h4 className="text-tech-green font-mono font-bold mb-3">RESTAURAR ALTERAÇÕES</h4>
             <div className="code-block text-xs bg-tech-black">
               <code className="text-tech-green">
-                # Restaurar configurações<br/>
-                sh flow_booster.sh --restore<br/><br/>
-                # Restaurar apps específicos<br/>
-                sh flow_booster.sh --restore-apps
+                # Reverter tudo<br/>
+                sh -c "$(curl -fsSL https://seusite.com/flowbooster.sh)" -- --reverse<br/><br/>
+                # Ou se baixou offline<br/>
+                sh /sdcard/flowbooster.sh --reverse
               </code>
             </div>
           </div>

@@ -10,79 +10,79 @@ const Execution = () => {
         </h2>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Via Termux */}
+          {/* Via Curl Direto */}
           <div className="border border-tech-green bg-tech-black p-6">
             <h3 className="text-tech-green font-mono font-bold text-xl mb-4 flex items-center">
-              <span className="mr-2">📱</span> VIA TERMUX
+              <span className="mr-2">🚀</span> EXECUÇÃO DIRETA (RECOMENDADO)
             </h3>
             
             <div className="space-y-4">
               <div className="code-block">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-tech-yellow font-mono text-xs">1. DOWNLOAD</span>
-                  <CopyButton text="wget https://raw.githubusercontent.com/user/flow-booster/main/flow_booster.sh" />
+                  <span className="text-tech-yellow font-mono text-xs">OTIMIZAÇÃO COMPLETA</span>
+                  <CopyButton text='sh -c "$(curl -fsSL https://seusite.com/flowbooster.sh)" -- --boost' />
                 </div>
                 <code className="text-tech-green text-xs">
-                  wget https://raw.githubusercontent.com/user/flow-booster/main/flow_booster.sh
+                  sh -c "$(curl -fsSL https://seusite.com/flowbooster.sh)" -- --boost
                 </code>
               </div>
               
               <div className="code-block">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-tech-yellow font-mono text-xs">2. PERMISSÃO</span>
-                  <CopyButton text="chmod +x flow_booster.sh" />
+                  <span className="text-tech-yellow font-mono text-xs">PERFIL GAMER</span>
+                  <CopyButton text='sh -c "$(curl -fsSL https://seusite.com/flowbooster.sh)" -- --gamer' />
                 </div>
                 <code className="text-tech-green text-xs">
-                  chmod +x flow_booster.sh
+                  sh -c "$(curl -fsSL https://seusite.com/flowbooster.sh)" -- --gamer
                 </code>
               </div>
               
               <div className="code-block">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-tech-yellow font-mono text-xs">3. EXECUTAR</span>
-                  <CopyButton text="./flow_booster.sh --optimize --debloat" />
+                  <span className="text-tech-yellow font-mono text-xs">ECONOMIA DE BATERIA</span>
+                  <CopyButton text='sh -c "$(curl -fsSL https://seusite.com/flowbooster.sh)" -- --battery' />
                 </div>
                 <code className="text-tech-green text-xs">
-                  ./flow_booster.sh --optimize --debloat
+                  sh -c "$(curl -fsSL https://seusite.com/flowbooster.sh)" -- --battery
                 </code>
               </div>
             </div>
           </div>
           
-          {/* Via ADB */}
+          {/* Download Offline */}
           <div className="border border-tech-blue bg-tech-black p-6">
             <h3 className="text-tech-blue font-mono font-bold text-xl mb-4 flex items-center">
-              <span className="mr-2">💻</span> VIA ADB
+              <span className="mr-2">💾</span> DOWNLOAD OFFLINE
             </h3>
             
             <div className="space-y-4">
               <div className="code-block">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-tech-yellow font-mono text-xs">1. UPLOAD PARA DEVICE</span>
-                  <CopyButton text="adb push flow_booster.sh /sdcard/" />
+                  <span className="text-tech-yellow font-mono text-xs">1. BAIXAR SCRIPT</span>
+                  <CopyButton text="curl -fsSL https://seusite.com/flowbooster.sh -o /sdcard/flowbooster.sh" />
                 </div>
                 <code className="text-tech-green text-xs">
-                  adb push flow_booster.sh /sdcard/
+                  curl -fsSL https://seusite.com/flowbooster.sh -o /sdcard/flowbooster.sh
                 </code>
               </div>
               
               <div className="code-block">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-tech-yellow font-mono text-xs">2. SHELL</span>
-                  <CopyButton text="adb shell" />
+                  <span className="text-tech-yellow font-mono text-xs">2. DAR PERMISSÃO</span>
+                  <CopyButton text="chmod +x /sdcard/flowbooster.sh" />
                 </div>
                 <code className="text-tech-green text-xs">
-                  adb shell
+                  chmod +x /sdcard/flowbooster.sh
                 </code>
               </div>
               
               <div className="code-block">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-tech-yellow font-mono text-xs">3. EXECUTAR</span>
-                  <CopyButton text="sh /sdcard/flow_booster.sh --optimize" />
+                  <CopyButton text="sh /sdcard/flowbooster.sh --boost" />
                 </div>
                 <code className="text-tech-green text-xs">
-                  sh /sdcard/flow_booster.sh --optimize
+                  sh /sdcard/flowbooster.sh --boost
                 </code>
               </div>
             </div>
@@ -98,16 +98,18 @@ const Execution = () => {
           <div className="bg-tech-black border border-tech-green p-6">
             <div className="code-block bg-transparent border-0 p-0">
               <div className="text-tech-yellow font-mono text-sm mb-4">
-                usuario@android:~$ ./flow_booster.sh --backup --optimize --debloat
+                usuario@android:~$ sh -c "$(curl -fsSL https://seusite.com/flowbooster.sh)" -- --boost
               </div>
               
               <div className="font-mono text-xs space-y-1 text-tech-green">
                 <div>[FLOW BOOSTER] Iniciando otimização brutal...</div>
-                <div>[BACKUP] Criando backup em /sdcard/flow_backup/...</div>
-                <div>[OPTIMIZE] Aplicando tweaks de performance...</div>
-                <div>[DEBLOAT] Removendo bloatware detectado...</div>
-                <div>[SUCCESS] Otimização concluída em 23.7s</div>
-                <div>[INFO] Logs salvos em /sdcard/flow_logs/</div>
+                <div>[DESBLOAT] Removendo apps desnecessários da marca...</div>
+                <div>[ANIMATIONS] Desativando animações do sistema...</div>
+                <div>[DNS] Configurando AdGuard DNS privado...</div>
+                <div>[DARKMODE] Forçando modo escuro...</div>
+                <div>[RAM PLUS] Ativando expansão de memória...</div>
+                <div>[SUCCESS] ✓ Otimização completa em 18.3s</div>
+                <div>[LOGS] Salvos em /sdcard/Logs/AndroidOptimizer_LOG.txt</div>
                 <div className="text-tech-yellow">usuario@android:~$ <span className="terminal-cursor"></span></div>
               </div>
             </div>
@@ -119,19 +121,19 @@ const Execution = () => {
           <div className="border border-tech-yellow bg-tech-black p-4">
             <h4 className="text-tech-yellow font-mono font-bold mb-2">REQUISITOS</h4>
             <ul className="text-tech-white text-sm font-mono space-y-1">
-              <li>→ Android 6.0+</li>
-              <li>→ Shell access (Termux/ADB)</li>
-              <li>→ Depuração USB habilitada</li>
-              <li>→ Conhecimento básico de shell</li>
+              <li>→ Android 7.0+</li>
+              <li>→ Shell access (Termux/Brevent)</li>
+              <li>→ Conexão com internet (curl)</li>
+              <li>→ Conhecimento básico de terminal</li>
             </ul>
           </div>
           
           <div className="border border-tech-red bg-tech-black p-4">
             <h4 className="text-tech-red font-mono font-bold mb-2">ATENÇÃO</h4>
             <ul className="text-tech-white text-sm font-mono space-y-1">
-              <li>→ Sempre use --backup primeiro</li>
+              <li>→ Use --reverse para desfazer</li>
               <li>→ Não interrompa a execução</li>
-              <li>→ Teste em device secundário</li>
+              <li>→ Teste primeiro com --minimal</li>
               <li>→ Power users only!</li>
             </ul>
           </div>

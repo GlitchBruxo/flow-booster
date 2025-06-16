@@ -41,59 +41,81 @@ const Hero = () => {
         </p>
 
         {/* Command preview */}
-        <div className="code-block max-w-2xl mx-auto mb-8 text-left">
+        <div className="code-block max-w-3xl mx-auto mb-8 text-left">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-tech-yellow font-mono text-xs">$ flow_booster.sh</span>
-            <CopyButton text="sh /sdcard/flow_booster.sh --optimize --debloat" />
+            <span className="text-tech-yellow font-mono text-xs">$ EXECUÇÃO DIRETA - SEM DOWNLOAD</span>
+            <CopyButton text='sh -c "$(curl -fsSL https://seusite.com/flowbooster.sh)" -- --boost' />
           </div>
           <code className="text-tech-green">
-            sh /sdcard/flow_booster.sh --optimize --debloat<span className="terminal-cursor"></span>
+            sh -c "$(curl -fsSL https://seusite.com/flowbooster.sh)" -- --boost<span className="terminal-cursor"></span>
           </code>
         </div>
 
         {/* Key features */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12 max-w-4xl mx-auto">
           <div className="bg-tech-dark border border-tech-green p-4">
+            <h3 className="font-mono font-bold text-tech-green mb-2">EXECUÇÃO DIRETA</h3>
+            <p className="text-sm text-tech-white">Execute via curl sem precisar baixar</p>
+          </div>
+          <div className="bg-tech-dark border border-tech-green p-4">
             <h3 className="font-mono font-bold text-tech-green mb-2">SEM ROOT</h3>
-            <p className="text-sm text-tech-white">Funciona via shell sem necessidade de root</p>
+            <p className="text-sm text-tech-white">Funciona via shell em qualquer Android</p>
           </div>
           <div className="bg-tech-dark border border-tech-green p-4">
-            <h3 className="font-mono font-bold text-tech-green mb-2">TERMINAL READY</h3>
-            <p className="text-sm text-tech-white">Execute via Termux, Brevent ou ADB</p>
-          </div>
-          <div className="bg-tech-dark border border-tech-green p-4">
-            <h3 className="font-mono font-bold text-tech-green mb-2">POWER USER</h3>
-            <p className="text-sm text-tech-white">Para desenvolvedores que sabem o que fazem</p>
+            <h3 className="font-mono font-bold text-tech-green mb-2">COMANDO --reverse</h3>
+            <p className="text-sm text-tech-white">Desfaz todas as alterações facilmente</p>
           </div>
         </div>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
           <Button 
             className="brutal-button text-base px-8 py-4"
             onClick={() => {
-              // Simulated download
-              console.log('Downloading flow_booster.sh...');
+              // Scroll to commands section
+              document.getElementById('commands')?.scrollIntoView({ behavior: 'smooth' });
             }}
           >
-            DOWNLOAD .SH
+            VER COMANDOS
           </Button>
           
           <Button 
             variant="outline" 
             className="brutal-button-secondary text-base px-8 py-4"
             onClick={() => {
-              window.open('https://github.com', '_blank');
+              window.open('https://discord.gg/darkanomaly', '_blank');
             }}
           >
-            VIEW ON GITHUB
+            DISCORD COMMUNITY
           </Button>
         </div>
 
+        {/* Quick commands */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 max-w-4xl mx-auto">
+          <div className="bg-tech-black border border-tech-green p-3">
+            <h4 className="text-tech-green font-mono text-sm font-bold mb-2">PERFIL GAMER</h4>
+            <div className="code-block text-xs bg-tech-dark border-0 p-2">
+              <code className="text-tech-green">--gamer</code>
+            </div>
+          </div>
+          <div className="bg-tech-black border border-tech-yellow p-3">
+            <h4 className="text-tech-yellow font-mono text-sm font-bold mb-2">ECONOMIA BATERIA</h4>
+            <div className="code-block text-xs bg-tech-dark border-0 p-2">
+              <code className="text-tech-green">--battery</code>
+            </div>
+          </div>
+          <div className="bg-tech-black border border-tech-blue p-3">
+            <h4 className="text-tech-blue font-mono text-sm font-bold mb-2">MINIMAL DEV</h4>
+            <div className="code-block text-xs bg-tech-dark border-0 p-2">
+              <code className="text-tech-green">--minimal</code>
+            </div>
+          </div>
+        </div>
+
         {/* Warning */}
-        <div className="mt-8 p-4 border border-tech-red bg-tech-dark/50">
+        <div className="p-4 border border-tech-red bg-tech-dark/50">
           <p className="text-tech-red font-mono text-sm">
-            ⚠ WARNING: POWER USER TOOL - USE WITH CAUTION ⚠
+            ⚠ WARNING: POWER USER TOOL - USE --reverse TO UNDO ⚠
           </p>
         </div>
       </div>

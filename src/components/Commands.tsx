@@ -4,63 +4,57 @@ import { CopyButton } from './CopyButton';
 const Commands = () => {
   const commands = [
     {
-      flag: '--optimize',
-      description: 'Otimização geral do sistema',
-      example: 'sh flow_booster.sh --optimize',
+      flag: '--boost',
+      description: 'Otimização completa: remove apps inúteis, desativa animações, ativa DNS privado AdGuard, força modo escuro, liga RAM Plus',
+      example: 'sh -c "$(curl -fsSL https://seusite.com/flowbooster.sh)" -- --boost',
       category: 'performance'
     },
     {
-      flag: '--debloat',
-      description: 'Remove apps e serviços desnecessários',
-      example: 'sh flow_booster.sh --debloat',
-      category: 'cleanup'
+      flag: '--reverse',
+      description: 'Restaura todas as alterações: configurações salvas, apps ocultos ou removidos',
+      example: 'sh -c "$(curl -fsSL https://seusite.com/flowbooster.sh)" -- --reverse',
+      category: 'safety'
     },
     {
-      flag: '--memory',
-      description: 'Otimização agressiva de memória',
-      example: 'sh flow_booster.sh --memory',
+      flag: '--gamer',
+      description: 'Perfil gamer: dados em segundo plano off, redução de efeitos, brilho e latência otimizados',
+      example: 'sh -c "$(curl -fsSL https://seusite.com/flowbooster.sh)" -- --gamer',
       category: 'performance'
     },
     {
       flag: '--battery',
-      description: 'Tweaks de economia de bateria',
-      example: 'sh flow_booster.sh --battery',
+      description: 'Economia de energia: GPS e dados de fundo off, power saver ativado',
+      example: 'sh -c "$(curl -fsSL https://seusite.com/flowbooster.sh)" -- --battery',
       category: 'power'
     },
     {
-      flag: '--network',
-      description: 'Otimização de conectividade',
-      example: 'sh flow_booster.sh --network',
+      flag: '--minimal',
+      description: 'Desliga efeitos e recursos inúteis. Ideal para devs ou quem quer o celular "cru"',
+      example: 'sh -c "$(curl -fsSL https://seusite.com/flowbooster.sh)" -- --minimal',
+      category: 'cleanup'
+    },
+    {
+      flag: '--desbloat',
+      description: 'Remove apps desnecessários da marca (Xiaomi, Samsung, Motorola)',
+      example: 'sh -c "$(curl -fsSL https://seusite.com/flowbooster.sh)" -- --desbloat',
+      category: 'cleanup'
+    },
+    {
+      flag: '--dns',
+      description: 'Ativa DNS privado com AdGuard (bloqueia rastreio e anúncios)',
+      example: 'sh -c "$(curl -fsSL https://seusite.com/flowbooster.sh)" -- --dns',
       category: 'network'
     },
     {
-      flag: '--kernel',
-      description: 'Tweaks avançados de kernel',
-      example: 'sh flow_booster.sh --kernel',
-      category: 'advanced'
+      flag: '--darkmode',
+      description: 'Força o modo escuro no sistema (se suportado)',
+      example: 'sh -c "$(curl -fsSL https://seusite.com/flowbooster.sh)" -- --darkmode',
+      category: 'system'
     },
     {
-      flag: '--backup',
-      description: 'Cria backup antes das alterações',
-      example: 'sh flow_booster.sh --backup --optimize',
-      category: 'safety'
-    },
-    {
-      flag: '--restore',
-      description: 'Restaura configurações do backup',
-      example: 'sh flow_booster.sh --restore',
-      category: 'safety'
-    },
-    {
-      flag: '--aggressive',
-      description: 'Modo brutal - máxima otimização',
-      example: 'sh flow_booster.sh --aggressive',
-      category: 'extreme'
-    },
-    {
-      flag: '--help',
-      description: 'Mostra todos os comandos disponíveis',
-      example: 'sh flow_booster.sh --help',
+      flag: '--download',
+      description: 'Baixa o script para execução offline',
+      example: 'curl -fsSL https://seusite.com/flowbooster.sh -o /sdcard/flowbooster.sh',
       category: 'info'
     }
   ];
@@ -70,9 +64,8 @@ const Commands = () => {
     cleanup: 'border-tech-blue text-tech-blue',
     power: 'border-tech-yellow text-tech-yellow',
     network: 'border-purple-500 text-purple-500',
-    advanced: 'border-tech-red text-tech-red',
-    safety: 'border-orange-500 text-orange-500',
-    extreme: 'border-red-600 text-red-600',
+    system: 'border-orange-500 text-orange-500',
+    safety: 'border-tech-red text-tech-red',
     info: 'border-tech-white text-tech-white'
   };
 
@@ -111,32 +104,30 @@ const Commands = () => {
           ))}
         </div>
         
-        {/* Combo commands */}
+        {/* Execução Direta */}
         <div className="mt-12">
           <h3 className="text-2xl font-black text-tech-white mb-6 font-mono">
-            [COMANDOS COMBINADOS]
+            [EXECUÇÃO DIRETA - SEM DOWNLOAD]
           </h3>
           
-          <div className="space-y-4">
-            <div className="code-block">
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-tech-yellow font-mono text-xs">OTIMIZAÇÃO COMPLETA</span>
-                <CopyButton text="sh flow_booster.sh --backup --optimize --debloat --memory" />
-              </div>
-              <code className="text-tech-green">
-                sh flow_booster.sh --backup --optimize --debloat --memory
-              </code>
-            </div>
+          <div className="bg-tech-dark border border-tech-green p-6">
+            <p className="text-tech-white mb-4">
+              Execute diretamente via <span className="text-tech-green font-mono">curl</span> sem precisar baixar o arquivo:
+            </p>
             
             <div className="code-block">
               <div className="flex items-center justify-between mb-2">
-                <span className="text-tech-red font-mono text-xs">MODO EXTREMO</span>
-                <CopyButton text="sh flow_booster.sh --backup --aggressive --kernel" />
+                <span className="text-tech-yellow font-mono text-xs">EXEMPLO: OTIMIZAÇÃO COMPLETA</span>
+                <CopyButton text='sh -c "$(curl -fsSL https://seusite.com/flowbooster.sh)" -- --boost' />
               </div>
               <code className="text-tech-green">
-                sh flow_booster.sh --backup --aggressive --kernel
+                sh -c "$(curl -fsSL https://seusite.com/flowbooster.sh)" -- --boost
               </code>
             </div>
+            
+            <p className="text-tech-white text-sm mt-4 font-mono">
+              💡 Basta trocar o <span className="text-tech-green">--boost</span> pelo comando que deseja.
+            </p>
           </div>
         </div>
       </div>

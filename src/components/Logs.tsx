@@ -1,109 +1,123 @@
 
+import { CopyButton } from './CopyButton';
+
 const Logs = () => {
   return (
     <section id="logs" className="py-20 px-4 bg-tech-black">
       <div className="container max-w-5xl mx-auto">
         <h2 className="text-3xl md:text-5xl font-black text-tech-white mb-12 font-mono glitch-text">
-          [LOGS & BACKUP]
+          [LOGS E BACKUP]
         </h2>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Estrutura de logs */}
+          {/* Logs */}
           <div className="border border-tech-green bg-tech-dark p-6">
-            <h3 className="text-tech-green font-mono font-bold text-xl mb-4">
-              LOCALIZAÇÃO DOS LOGS
+            <h3 className="text-tech-green font-mono font-bold text-xl mb-4 flex items-center">
+              <span className="mr-2">📄</span> LOGS DETALHADOS
             </h3>
             
-            <div className="code-block bg-tech-black text-xs">
-              <div className="font-mono text-tech-green">
-                <div>/sdcard/</div>
-                <div>└── Logs/</div>
-                <div>    └── AndroidOptimizer_LOG.txt</div>
+            <p className="text-tech-white mb-4 text-sm">
+              Todos os logs são salvos automaticamente para análise e compartilhamento:
+            </p>
+            
+            <div className="code-block mb-4">
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-tech-yellow font-mono text-xs">LOCALIZAÇÃO DOS LOGS</span>
+                <CopyButton text="/sdcard/Logs/AndroidOptimizer_LOG.txt" />
               </div>
+              <code className="text-tech-green">
+                /sdcard/Logs/AndroidOptimizer_LOG.txt
+              </code>
             </div>
             
-            <div className="mt-4 text-tech-white text-sm">
-              <p className="mb-2">Todos os logs ficam no arquivo:</p>
-              <div className="code-block bg-tech-black">
-                <code className="text-tech-green">/sdcard/Logs/AndroidOptimizer_LOG.txt</code>
+            <div className="bg-tech-black border border-tech-green/30 p-4 text-xs font-mono">
+              <div className="text-tech-yellow mb-2">[EXEMPLO DE LOG]</div>
+              <div className="text-tech-green space-y-1">
+                <div>[+] Dispositivo: Galaxy S21 (samsung - API 31)</div>
+                <div>[+] 🧹 Desinstalando apps desnecessários...</div>
+                <div>[+] 🗑️ com.samsung.android.bixby.agent removido</div>
+                <div>[+] ⚡ Animações desativadas</div>
+                <div>[+] 🛡️ DNS privado ativado: dns.adguard.com</div>
+                <div>[+] ✔️ Otimização concluída</div>
               </div>
             </div>
           </div>
           
-          {/* Sistema de backup */}
+          {/* Backup */}
           <div className="border border-tech-blue bg-tech-dark p-6">
-            <h3 className="text-tech-blue font-mono font-bold text-xl mb-4">
-              SISTEMA DE BACKUP AUTOMÁTICO
+            <h3 className="text-tech-blue font-mono font-bold text-xl mb-4 flex items-center">
+              <span className="mr-2">🔐</span> SISTEMA DE BACKUP
             </h3>
             
-            <div className="space-y-4 text-tech-white text-sm">
-              <div>
-                <h4 className="text-tech-yellow font-mono font-bold">LOGS EM TEMPO REAL</h4>
-                <p>Cada comando executado é logado com timestamp e resultado.</p>
+            <p className="text-tech-white mb-4 text-sm">
+              Configurações são salvas automaticamente antes de qualquer alteração:
+            </p>
+            
+            <div className="space-y-4">
+              <div className="code-block">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-tech-yellow font-mono text-xs">BACKUP GLOBAL</span>
+                  <CopyButton text="/sdcard/Logs/Backup_Optimizer/global.txt" />
+                </div>
+                <code className="text-tech-green text-xs">
+                  /sdcard/Logs/Backup_Optimizer/global.txt
+                </code>
               </div>
               
-              <div>
-                <h4 className="text-tech-yellow font-mono font-bold">BACKUP AUTOMÁTICO</h4>
-                <p>Configurações salvas antes de qualquer alteração.</p>
+              <div className="code-block">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-tech-yellow font-mono text-xs">BACKUP APPS</span>
+                  <CopyButton text="/sdcard/Logs/Backup_Optimizer/apps.list" />
+                </div>
+                <code className="text-tech-green text-xs">
+                  /sdcard/Logs/Backup_Optimizer/apps.list
+                </code>
               </div>
-              
-              <div>
-                <h4 className="text-tech-yellow font-mono font-bold">COMANDO --reverse</h4>
-                <p>Sistema de restauração para reverter todas as alterações.</p>
-              </div>
+            </div>
+            
+            <div className="mt-4 p-3 bg-tech-black border border-tech-blue/30">
+              <p className="text-tech-blue text-xs font-mono">
+                💡 Use --reverse para restaurar todas as configurações originais automaticamente
+              </p>
             </div>
           </div>
         </div>
         
-        {/* Exemplo de log */}
-        <div className="mt-12">
-          <h3 className="text-2xl font-black text-tech-white mb-6 font-mono">
-            [EXEMPLO DE LOG DE EXECUÇÃO]
+        {/* Exemplo de uso dos logs */}
+        <div className="mt-12 border border-tech-yellow bg-tech-dark p-6">
+          <h3 className="text-tech-yellow font-mono font-bold text-xl mb-4">
+            📊 ANALISANDO OS RESULTADOS
           </h3>
           
-          <div className="code-block">
-            <div className="font-mono text-xs space-y-1">
-              <div className="text-tech-yellow">[2024-06-16 14:23:15] FLOW BOOSTER v3.0 - INICIANDO --boost</div>
-              <div className="text-tech-blue">[2024-06-16 14:23:16] [BACKUP] Salvando configurações atuais...</div>
-              <div className="text-tech-green">[2024-06-16 14:23:18] [DESBLOAT] ✓ Detectada marca: Samsung</div>
-              <div className="text-tech-green">[2024-06-16 14:23:19] [DESBLOAT] ✓ Removidos 23 apps Samsung desnecessários</div>
-              <div className="text-tech-blue">[2024-06-16 14:23:20] [ANIMATIONS] Desativando animações do sistema...</div>
-              <div className="text-tech-green">[2024-06-16 14:23:21] [ANIMATIONS] ✓ Animações desativadas</div>
-              <div className="text-tech-blue">[2024-06-16 14:23:22] [DNS] Configurando AdGuard DNS...</div>
-              <div className="text-tech-green">[2024-06-16 14:23:23] [DNS] ✓ DNS privado ativado</div>
-              <div className="text-tech-blue">[2024-06-16 14:23:24] [DARKMODE] Forçando modo escuro...</div>
-              <div className="text-tech-green">[2024-06-16 14:23:25] [DARKMODE] ✓ Modo escuro ativado</div>
-              <div className="text-tech-blue">[2024-06-16 14:23:26] [RAM PLUS] Verificando suporte...</div>
-              <div className="text-tech-green">[2024-06-16 14:23:27] [RAM PLUS] ✓ RAM Plus ativado (4GB extra)</div>
-              <div className="text-tech-yellow">[2024-06-16 14:23:28] [SUCCESS] Otimização --boost concluída em 13.2s</div>
-              <div className="text-tech-white">[2024-06-16 14:23:28] [INFO] Log salvo em /sdcard/Logs/AndroidOptimizer_LOG.txt</div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="bg-tech-black p-4 border border-tech-green">
+              <h4 className="text-tech-green font-mono text-sm font-bold mb-2">ANTES</h4>
+              <ul className="text-tech-white text-xs space-y-1">
+                <li>→ 47 apps instalados</li>
+                <li>→ Animações ativas</li>
+                <li>→ DNS operadora</li>
+                <li>→ Modo claro</li>
+              </ul>
             </div>
-          </div>
-        </div>
-        
-        {/* Comandos de log */}
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="border border-tech-yellow bg-tech-dark p-4">
-            <h4 className="text-tech-yellow font-mono font-bold mb-3">VISUALIZAR LOGS</h4>
-            <div className="code-block text-xs bg-tech-black">
-              <code className="text-tech-green">
-                # Ver log completo<br/>
-                cat /sdcard/Logs/AndroidOptimizer_LOG.txt<br/><br/>
-                # Ver últimas 20 linhas<br/>
-                tail -20 /sdcard/Logs/AndroidOptimizer_LOG.txt
-              </code>
+            
+            <div className="bg-tech-black p-4 border border-tech-blue">
+              <h4 className="text-tech-blue font-mono text-sm font-bold mb-2">EXECUTANDO</h4>
+              <ul className="text-tech-white text-xs space-y-1">
+                <li>→ Backup criado</li>
+                <li>→ 12 apps removidos</li>
+                <li>→ Tweaks aplicados</li>
+                <li>→ Log salvo</li>
+              </ul>
             </div>
-          </div>
-          
-          <div className="border border-tech-green bg-tech-dark p-4">
-            <h4 className="text-tech-green font-mono font-bold mb-3">RESTAURAR ALTERAÇÕES</h4>
-            <div className="code-block text-xs bg-tech-black">
-              <code className="text-tech-green">
-                # Reverter tudo<br/>
-                sh -c "$(curl -fsSL https://seusite.com/flowbooster.sh)" -- --reverse<br/><br/>
-                # Ou se baixou offline<br/>
-                sh /sdcard/flowbooster.sh --reverse
-              </code>
+            
+            <div className="bg-tech-black p-4 border border-tech-green">
+              <h4 className="text-tech-green font-mono text-sm font-bold mb-2">DEPOIS</h4>
+              <ul className="text-tech-white text-xs space-y-1">
+                <li>→ 35 apps restantes</li>
+                <li>→ Sistema mais fluido</li>
+                <li>→ DNS com bloqueio</li>
+                <li>→ Modo escuro ativo</li>
+              </ul>
             </div>
           </div>
         </div>

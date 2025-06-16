@@ -31,55 +31,73 @@ const Hero = () => {
           FLOW BOOSTER
         </h1>
 
+        {/* Subtitle */}
+        <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-tech-green mb-2 font-mono">
+          ANDROID BRUTALITY ENGINE
+        </h2>
+
         {/* Taglines */}
         <p className="text-lg sm:text-xl md:text-2xl font-bold text-tech-green mb-2 font-mono">
           "EXECUTADO COM BRUTALIDADE, FOCO E EFICIÊNCIA"
         </p>
         
         <p className="text-sm sm:text-base md:text-lg text-tech-white mb-8 font-mono">
-          DESBLOAT. OTIMIZE. DESTRUA A LENTIDÃO.
+          🔥 PERFORMANCE MÁXIMA. ZERO ENROLAÇÃO.
         </p>
 
         {/* Command preview */}
-        <div className="code-block max-w-3xl mx-auto mb-8 text-left">
+        <div className="code-block max-w-4xl mx-auto mb-8 text-left">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-tech-yellow font-mono text-xs">$ EXECUÇÃO DIRETA - SEM DOWNLOAD</span>
-            <CopyButton text='sh /sdcard/bomba.sh --boost' />
+            <span className="text-tech-yellow font-mono text-xs">$ EXECUÇÃO DIRETA VIA CURL - SEM DOWNLOAD</span>
+            <CopyButton text='sh -c "$(curl -fsSL https://raw.githubusercontent.com/GlitchBruxo/flow-booster-brutality-engine/refs/heads/main/script/bomba.sh)" -- --boost' />
           </div>
-          <code className="text-tech-green">
-            sh /sdcard/bomba.sh --boost<span className="terminal-cursor"></span>
+          <code className="text-tech-green text-xs">
+            sh -c "$(curl -fsSL https://raw.githubusercontent.com/GlitchBruxo/flow-booster-brutality-engine/refs/heads/main/script/bomba.sh)" -- --boost<span className="terminal-cursor"></span>
           </code>
         </div>
 
-        {/* Download Button */}
+        {/* GitHub Button */}
         <div className="mb-8">
           <Button 
-            className="brutal-button text-base px-8 py-4"
+            className="brutal-button text-base px-8 py-4 mr-4"
             onClick={() => {
-              // Download the script
+              window.open('https://github.com/GlitchBruxo/flow-booster-brutality-engine', '_blank');
+            }}
+          >
+            GITHUB REPO
+          </Button>
+          
+          <Button 
+            variant="outline"
+            className="brutal-button-secondary text-base px-8 py-4"
+            onClick={() => {
               const link = document.createElement('a');
-              link.href = '/script/bomba.sh';
+              link.href = 'https://raw.githubusercontent.com/GlitchBruxo/flow-booster-brutality-engine/refs/heads/main/script/bomba.sh';
               link.download = 'bomba.sh';
               link.click();
             }}
           >
-            DOWNLOAD BOMBA.SH
+            DOWNLOAD SCRIPT
           </Button>
         </div>
 
         {/* Key features */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-12 max-w-5xl mx-auto">
           <div className="bg-tech-dark border border-tech-green p-4">
             <h3 className="font-mono font-bold text-tech-green mb-2">SEM ROOT</h3>
-            <p className="text-sm text-tech-white">Funciona via shell em qualquer Android</p>
+            <p className="text-sm text-tech-white">Funciona via shell em qualquer Android 8+</p>
           </div>
           <div className="bg-tech-dark border border-tech-green p-4">
-            <h3 className="font-mono font-bold text-tech-green mb-2">COMANDO --reverse</h3>
-            <p className="text-sm text-tech-white">Desfaz todas as alterações facilmente</p>
+            <h3 className="font-mono font-bold text-tech-green mb-2">REVERSÍVEL</h3>
+            <p className="text-sm text-tech-white">Use --reverse para desfazer tudo</p>
           </div>
           <div className="bg-tech-dark border border-tech-green p-4">
             <h3 className="font-mono font-bold text-tech-green mb-2">LOGS DETALHADOS</h3>
-            <p className="text-sm text-tech-white">Salva tudo em /sdcard/Logs/</p>
+            <p className="text-sm text-tech-white">Tudo salvo em /sdcard/Logs/</p>
+          </div>
+          <div className="bg-tech-dark border border-tech-green p-4">
+            <h3 className="font-mono font-bold text-tech-green mb-2">EXECUÇÃO DIRETA</h3>
+            <p className="text-sm text-tech-white">Via curl - sem download necessário</p>
           </div>
         </div>
 
@@ -88,7 +106,6 @@ const Hero = () => {
           <Button 
             className="brutal-button text-base px-8 py-4"
             onClick={() => {
-              // Scroll to commands section
               document.getElementById('commands')?.scrollIntoView({ behavior: 'smooth' });
             }}
           >

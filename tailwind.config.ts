@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,24 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Dark Tech Brutalista Colors
+				tech: {
+					black: '#0a0a0a',
+					dark: '#111111',
+					gray: '#1a1a1a',
+					'gray-light': '#2a2a2a',
+					green: '#00ff41',
+					'green-dark': '#00cc33',
+					red: '#ff1744',
+					yellow: '#ffff00',
+					blue: '#00bfff',
+					white: '#ffffff'
 				}
+			},
+			fontFamily: {
+				mono: ['JetBrains Mono', 'Consolas', 'Monaco', 'monospace'],
+				brutal: ['Inter', 'system-ui', 'sans-serif']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +102,25 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'terminal-blink': {
+					'0%, 50%': { opacity: '1' },
+					'51%, 100%': { opacity: '0' }
+				},
+				'glitch': {
+					'0%': { transform: 'translate(0)' },
+					'20%': { transform: 'translate(-2px, 2px)' },
+					'40%': { transform: 'translate(-2px, -2px)' },
+					'60%': { transform: 'translate(2px, 2px)' },
+					'80%': { transform: 'translate(2px, -2px)' },
+					'100%': { transform: 'translate(0)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'terminal-blink': 'terminal-blink 1s infinite',
+				'glitch': 'glitch 0.3s ease-in-out'
 			}
 		}
 	},

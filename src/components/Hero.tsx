@@ -5,7 +5,7 @@ import { CopyButton } from './CopyButton';
 
 const Hero = () => {
   const asciiArt = `
-███████╗██╗      ██████╗ ██╗    ██╗    ██████╗  ██████╗  ██████╗ ███████╗████████╗███████╗██████╗ 
+███████╗██╗      ██████╗ ██╗    ██║    ██████╗  ██████╗  ██████╗ ███████╗████████╗███████╗██████╗ 
 ██╔════╝██║     ██╔═══██╗██║    ██║    ██╔══██╗██╔═══██╗██╔═══██╗██╔════╝╚══██╔══╝██╔════╝██╔══██╗
 █████╗  ██║     ██║   ██║██║ █╗ ██║    ██████╔╝██║   ██║██║   ██║███████╗   ██║   █████╗  ██████╔╝
 ██╔══╝  ██║     ██║   ██║██║███╗██║    ██╔══██╗██║   ██║██║   ██║╚════██║   ██║   ██╔══╝  ██╔══██╗
@@ -28,7 +28,7 @@ const Hero = () => {
 
         {/* Main title */}
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-black text-tech-white mb-4 glitch-text">
-          ANDROID CLI OPTIMIZER
+          FLOW BOOSTER
         </h1>
 
         {/* Taglines */}
@@ -44,19 +44,31 @@ const Hero = () => {
         <div className="code-block max-w-3xl mx-auto mb-8 text-left">
           <div className="flex items-center justify-between mb-2">
             <span className="text-tech-yellow font-mono text-xs">$ EXECUÇÃO DIRETA - SEM DOWNLOAD</span>
-            <CopyButton text='sh -c "$(curl -fsSL https://seusite.com/flowbooster.sh)" -- --boost' />
+            <CopyButton text='sh /sdcard/bomba.sh --boost' />
           </div>
           <code className="text-tech-green">
-            sh -c "$(curl -fsSL https://seusite.com/flowbooster.sh)" -- --boost<span className="terminal-cursor"></span>
+            sh /sdcard/bomba.sh --boost<span className="terminal-cursor"></span>
           </code>
+        </div>
+
+        {/* Download Button */}
+        <div className="mb-8">
+          <Button 
+            className="brutal-button text-base px-8 py-4"
+            onClick={() => {
+              // Download the script
+              const link = document.createElement('a');
+              link.href = '/script/bomba.sh';
+              link.download = 'bomba.sh';
+              link.click();
+            }}
+          >
+            DOWNLOAD BOMBA.SH
+          </Button>
         </div>
 
         {/* Key features */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12 max-w-4xl mx-auto">
-          <div className="bg-tech-dark border border-tech-green p-4">
-            <h3 className="font-mono font-bold text-tech-green mb-2">EXECUÇÃO DIRETA</h3>
-            <p className="text-sm text-tech-white">Execute via curl sem precisar baixar</p>
-          </div>
           <div className="bg-tech-dark border border-tech-green p-4">
             <h3 className="font-mono font-bold text-tech-green mb-2">SEM ROOT</h3>
             <p className="text-sm text-tech-white">Funciona via shell em qualquer Android</p>
@@ -64,6 +76,10 @@ const Hero = () => {
           <div className="bg-tech-dark border border-tech-green p-4">
             <h3 className="font-mono font-bold text-tech-green mb-2">COMANDO --reverse</h3>
             <p className="text-sm text-tech-white">Desfaz todas as alterações facilmente</p>
+          </div>
+          <div className="bg-tech-dark border border-tech-green p-4">
+            <h3 className="font-mono font-bold text-tech-green mb-2">LOGS DETALHADOS</h3>
+            <p className="text-sm text-tech-white">Salva tudo em /sdcard/Logs/</p>
           </div>
         </div>
 

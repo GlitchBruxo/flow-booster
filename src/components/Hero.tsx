@@ -4,13 +4,22 @@ import { Button } from '@/components/ui/button';
 import { CopyButton } from './CopyButton';
 
 const Hero = () => {
-  const asciiArt = `
-███████╗██╗      ██████╗ ██╗    ██║    ██████╗  ██████╗  ██████╗ ███████╗████████╗███████╗██████╗ 
-██╔════╝██║     ██╔═══██╗██║    ██║    ██╔══██╗██╔═══██╗██╔═══██╗██╔════╝╚══██╔══╝██╔════╝██╔══██╗
-█████╗  ██║     ██║   ██║██║ █╗ ██║    ██████╔╝██║   ██║██║   ██║███████╗   ██║   █████╗  ██████╔╝
-██╔══╝  ██║     ██║   ██║██║███╗██║    ██╔══██╗██║   ██║██║   ██║╚════██║   ██║   ██╔══╝  ██╔══██╗
-██║     ███████╗╚██████╔╝╚███╔███╔╝    ██████╔╝╚██████╔╝╚██████╔╝███████║   ██║   ███████╗██║  ██║
-╚═╝     ╚══════╝ ╚═════╝  ╚══╝╚══╝     ╚═════╝  ╚═════╝  ╚═════╝ ╚══════╝   ╚═╝   ╚══════╝╚═╝  ╚═╝
+  const asciiArtFlow = `
+███████╗██╗      ██████╗ ██╗    ██║
+██╔════╝██║     ██╔═══██╗██║    ██║
+█████╗  ██║     ██║   ██║██║ █╗ ██║
+██╔══╝  ██║     ██║   ██║██║███╗██║
+██║     ███████╗╚██████╔╝╚███╔███╔╝
+╚═╝     ╚══════╝ ╚═════╝  ╚══╝╚══╝
+`;
+
+  const asciiArtBooster = `
+██████╗  ██████╗  ██████╗ ███████╗████████╗███████╗██████╗ 
+██╔══██╗██╔═══██╗██╔═══██╗██╔════╝╚══██╔══╝██╔════╝██╔══██╗
+██████╔╝██║   ██║██║   ██║███████╗   ██║   █████╗  ██████╔╝
+██╔══██╗██║   ██║██║   ██║╚════██║   ██║   ██╔══╝  ██╔══██╗
+██████╔╝╚██████╔╝╚██████╔╝███████║   ██║   ███████╗██║  ██║
+╚═════╝  ╚═════╝  ╚═════╝ ╚══════╝   ╚═╝   ╚══════╝╚═╝  ╚═╝
 `;
 
   return (
@@ -19,10 +28,17 @@ const Hero = () => {
       <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,65,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,65,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
       
       <div className="container max-w-6xl mx-auto text-center relative z-10">
-        {/* ASCII Art */}
+        {/* ASCII Art - FLOW */}
+        <div className="mb-4 overflow-x-auto">
+          <pre className="ascii-art text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl inline-block">
+            {asciiArtFlow}
+          </pre>
+        </div>
+
+        {/* ASCII Art - BOOSTER */}
         <div className="mb-8 overflow-x-auto">
           <pre className="ascii-art text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl inline-block">
-            {asciiArt}
+            {asciiArtBooster}
           </pre>
         </div>
 

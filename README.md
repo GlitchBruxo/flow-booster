@@ -40,23 +40,27 @@ Sem precisar baixar nada antes:
 
 ```bash
 sh -c "$(curl -fsSL https://dub.sh/flowbooster)" -- --boost
+```
 
-Substitua --boost por qualquer outro comando disponível.
+* Substitua --boost por qualquer outro comando disponível.
 
-Exemplos:
+- Exemplos:
 
 Modo gamer:
 
+```bash
 sh -c "$(curl -fsSL https://dub.sh/flowbooster)" -- --gamer
-
+```
 Ativar modo escuro:
 
+```bash
 sh -c "$(curl -fsSL https://dub.sh/flowbooster)" -- --darkmode
-
+```
 Restauração completa:
 
+```bash
 sh -c "$(curl -fsSL https://dub.sh/flowbooster)" -- --reverse
-
+```
 
 
 ---
@@ -64,22 +68,16 @@ sh -c "$(curl -fsSL https://dub.sh/flowbooster)" -- --reverse
 📂 Logs e Backup
 
 Logs salvos em: /sdcard/Logs/AndroidOptimizer_LOG.txt
-
 Backups em: /sdcard/Logs/Backup_Optimizer/
-
 Seguro, reversível e transparente.
-
-
 
 ---
 
 💬 Participe da Comunidade
 
 Tem feedback, bugs ou quer compartilhar o desempenho?
-
 👉 Entre no nosso Discord:
 https://discord.gg/darkanomaly
-
 
 ---
 
@@ -88,8 +86,3 @@ https://discord.gg/darkanomaly
 Feito por xGlitchBruxo com sangue nos olhos e foco total em performance real.
 
 > “Menos UI, mais FPS. Menos bloat, mais poder.”
-
-
-
-
-

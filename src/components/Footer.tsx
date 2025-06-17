@@ -25,28 +25,23 @@ const Footer = () => {
             <h4 className="text-tech-white font-mono font-bold mb-4">LINKS</h4>
             <ul className="space-y-2 font-mono text-sm">
               <li>
-                <a href="#about" className="text-tech-green hover:text-tech-white transition-colors">
-                  → Sobre o Script
+                <a href="/docs" className="text-tech-green hover:text-tech-white transition-colors">
+                  → Documentação
                 </a>
               </li>
               <li>
-                <a href="#commands" className="text-tech-green hover:text-tech-white transition-colors">
-                  → Comandos
+                <a href="/report-issue" className="text-tech-green hover:text-tech-white transition-colors">
+                  → Reportar Issues
                 </a>
               </li>
               <li>
-                <a href="#execution" className="text-tech-green hover:text-tech-white transition-colors">
-                  → Como Executar
+                <a href="https://github.com/GlitchBruxo/flow-booster-brutality-engine/tree/sh" target="_blank" rel="noopener noreferrer" className="text-tech-green hover:text-tech-white transition-colors">
+                  → GitHub Repository
                 </a>
               </li>
               <li>
-                <a href="#logs" className="text-tech-green hover:text-tech-white transition-colors">
-                  → Logs & Backup
-                </a>
-              </li>
-              <li>
-                <a href="#community" className="text-tech-green hover:text-tech-white transition-colors">
-                  → Comunidade
+                <a href="https://discord.gg/darkanomaly" target="_blank" rel="noopener noreferrer" className="text-tech-green hover:text-tech-white transition-colors">
+                  → Discord Community
                 </a>
               </li>
             </ul>
@@ -57,22 +52,22 @@ const Footer = () => {
             <h4 className="text-tech-white font-mono font-bold mb-4">CONTATO</h4>
             <ul className="space-y-2 font-mono text-sm">
               <li>
-                <a href="#" className="text-tech-blue hover:text-tech-white transition-colors">
+                <a href="https://discord.gg/darkanomaly" target="_blank" rel="noopener noreferrer" className="text-tech-blue hover:text-tech-white transition-colors">
                   → Discord Server
                 </a>
               </li>
               <li>
-                <a href="#" className="text-tech-green hover:text-tech-white transition-colors">
+                <a href="https://github.com/GlitchBruxo/flow-booster-brutality-engine/tree/sh" target="_blank" rel="noopener noreferrer" className="text-tech-green hover:text-tech-white transition-colors">
                   → GitHub Repository
                 </a>
               </li>
               <li>
-                <a href="#" className="text-tech-yellow hover:text-tech-white transition-colors">
+                <a href="/docs" className="text-tech-yellow hover:text-tech-white transition-colors">
                   → Documentation
                 </a>
               </li>
               <li>
-                <a href="#" className="text-tech-red hover:text-tech-white transition-colors">
+                <a href="/report-issue" className="text-tech-red hover:text-tech-white transition-colors">
                   → Report Issues
                 </a>
               </li>

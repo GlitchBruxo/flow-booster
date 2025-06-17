@@ -77,7 +77,7 @@ const Hero = () => {
           <Button 
             className="brutal-button text-base px-8 py-4 mr-4"
             onClick={() => {
-              window.open('https://github.com/GlitchBruxo/flow-booster-brutality-engine', '_blank');
+              window.open('https://github.com/GlitchBruxo/flow-booster-brutality-engine/tree/sh', '_blank');
             }}
           >
             GITHUB REPO
@@ -122,10 +122,10 @@ const Hero = () => {
           <Button 
             className="brutal-button text-base px-8 py-4"
             onClick={() => {
-              document.getElementById('commands')?.scrollIntoView({ behavior: 'smooth' });
+              window.location.href = '/docs';
             }}
           >
-            VER COMANDOS
+            VER DOCUMENTAÇÃO
           </Button>
           
           <Button 
@@ -136,6 +136,16 @@ const Hero = () => {
             }}
           >
             DISCORD COMMUNITY
+          </Button>
+          
+          <Button 
+            variant="outline" 
+            className="brutal-button-secondary text-base px-8 py-4"
+            onClick={() => {
+              window.location.href = '/report-issue';
+            }}
+          >
+            REPORT ISSUES
           </Button>
         </div>
 

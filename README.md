@@ -42,21 +42,21 @@ Sem precisar baixar nada antes:
 sh -c "$(curl -fsSL https://dub.sh/flowbooster)" -- --boost
 ```
 
-* Substitua --boost por qualquer outro comando disponível.
+Substitua --boost por qualquer outro comando disponível.
 
-- Exemplos:
+## Exemplos:
 
-Modo gamer:
+- Modo gamer:
 
 ```bash
 sh -c "$(curl -fsSL https://dub.sh/flowbooster)" -- --gamer
 ```
-Ativar modo escuro:
+- Ativar modo escuro:
 
 ```bash
 sh -c "$(curl -fsSL https://dub.sh/flowbooster)" -- --darkmode
 ```
-Restauração completa:
+- Restauração completa:
 
 ```bash
 sh -c "$(curl -fsSL https://dub.sh/flowbooster)" -- --reverse
@@ -67,8 +67,8 @@ sh -c "$(curl -fsSL https://dub.sh/flowbooster)" -- --reverse
 
 📂 Logs e Backup
 
-Logs salvos em: /sdcard/Logs/AndroidOptimizer_LOG.txt
-Backups em: /sdcard/Logs/Backup_Optimizer/
+Logs salvos em: `/sdcard/Logs/AndroidOptimizer_LOG.txt`
+Backups em: `/sdcard/Logs/Backup_Optimizer/`
 Seguro, reversível e transparente.
 
 ---

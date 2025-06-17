@@ -2,7 +2,7 @@
 import { CopyButton } from './CopyButton';
 
 const Execution = () => {
-  const githubUrl = 'https://raw.githubusercontent.com/GlitchBruxo/flow-booster-brutality-engine/refs/heads/main/script/bomba.sh';
+  const githubUrl = 'https://dub.sh/flowbooster';
   
   return (
     <section id="execution" className="py-20 px-4 bg-tech-dark">

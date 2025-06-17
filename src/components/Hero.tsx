@@ -49,10 +49,10 @@ const Hero = () => {
         <div className="code-block max-w-4xl mx-auto mb-8 text-left">
           <div className="flex items-center justify-between mb-2">
             <span className="text-tech-yellow font-mono text-xs">$ EXECUÇÃO DIRETA VIA CURL - SEM DOWNLOAD</span>
-            <CopyButton text='sh -c "$(curl -fsSL https://raw.githubusercontent.com/GlitchBruxo/flow-booster-brutality-engine/refs/heads/main/script/bomba.sh)" -- --boost' />
+            <CopyButton text='sh -c "$(curl -fsSL https://dub.sh/flowbooster)" -- --boost' />
           </div>
           <code className="text-tech-green text-xs">
-            sh -c "$(curl -fsSL https://raw.githubusercontent.com/GlitchBruxo/flow-booster-brutality-engine/refs/heads/main/script/bomba.sh)" -- --boost<span className="terminal-cursor"></span>
+            sh -c "$(curl -fsSL https://dub.sh/flowbooster)" -- --boost<span className="terminal-cursor"></span>
           </code>
         </div>
 
@@ -72,7 +72,7 @@ const Hero = () => {
             className="brutal-button-secondary text-base px-8 py-4"
             onClick={() => {
               const link = document.createElement('a');
-              link.href = 'https://raw.githubusercontent.com/GlitchBruxo/flow-booster-brutality-engine/refs/heads/main/script/bomba.sh';
+              link.href = 'https://dub.sh/flowbooster';
               link.download = 'bomba.sh';
               link.click();
             }}

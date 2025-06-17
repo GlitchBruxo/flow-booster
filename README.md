@@ -1,73 +1,95 @@
-# Welcome to your Lovable project
+# 🚀 Flow Booster - Brutality Engine
 
-## Project info
+**Flow Booster** é um script de otimização avançada para Android, feito para usuários que querem desempenho **máximo**, interface limpa e configurações refinadas — tudo direto do terminal. Sem root. Sem enrolação. Foco em **velocidade, estabilidade e autonomia**.
 
-**URL**: https://lovable.dev/projects/8e51be51-976a-4d52-9dab-4a5a6ae50e0f
+---
 
-## How can I edit this code?
+## 📦 O que o Flow Booster faz?
 
-There are several ways of editing your application.
+✅ Remove apps inúteis (desbloat por marca)  
+✅ Ajusta animações, DNS, brilho, dados e muito mais  
+✅ Ativa modo escuro e DNS seguro (AdGuard)  
+✅ Força desempenho e prioriza recursos essenciais  
+✅ Permite restaurar tudo com um único comando  
+✅ Roda via ADB Shell (ex: Brevent), sem root  
+✅ Totalmente em shell script. Rápido. Leve. Brutal.
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/8e51be51-976a-4d52-9dab-4a5a6ae50e0f) and start prompting.
+## ⚙️ Comandos Disponíveis
 
-Changes made via Lovable will be committed automatically to this repo.
+Use qualquer um dos comandos abaixo com o script:
 
-**Use your preferred IDE**
+| Comando         | Ação                                                                 |
+|-----------------|----------------------------------------------------------------------|
+| `--boost`       | Otimização completa + desbloat + tweaks de performance               |
+| `--reverse`     | Restaura todas as configs salvas e reinstala apps removidos         |
+| `--gamer`       | Foco total em performance para jogos (sem notificações, etc)        |
+| `--battery`     | Modo economia agressiva de bateria                                   |
+| `--minimal`     | Sistema minimalista e silencioso                                     |
+| `--desbloat`    | Apenas remove apps inúteis (desbloat por marca detectada)           |
+| `--dns`         | Ativa DNS privado `dns.adguard.com`                                  |
+| `--darkmode`    | Força o Modo Escuro no sistema (se suportado)                        |
+| `--download`    | Salva o script em `/sdcard/flowbooster.sh`                           |
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🔥 Execução Instantânea (via `curl`)
 
-Follow these steps:
+Sem precisar baixar nada antes:
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+```bash
+sh -c "$(curl -fsSL https://dub.sh/flowbooster)" -- --boost
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Substitua --boost por qualquer outro comando disponível.
 
-# Step 3: Install the necessary dependencies.
-npm i
+Exemplos:
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+Modo gamer:
 
-**Edit a file directly in GitHub**
+sh -c "$(curl -fsSL https://dub.sh/flowbooster)" -- --gamer
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Ativar modo escuro:
 
-**Use GitHub Codespaces**
+sh -c "$(curl -fsSL https://dub.sh/flowbooster)" -- --darkmode
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Restauração completa:
 
-## What technologies are used for this project?
+sh -c "$(curl -fsSL https://dub.sh/flowbooster)" -- --reverse
 
-This project is built with:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
 
-## How can I deploy this project?
+---
 
-Simply open [Lovable](https://lovable.dev/projects/8e51be51-976a-4d52-9dab-4a5a6ae50e0f) and click on Share -> Publish.
+📂 Logs e Backup
 
-## Can I connect a custom domain to my Lovable project?
+Logs salvos em: /sdcard/Logs/AndroidOptimizer_LOG.txt
 
-Yes, you can!
+Backups em: /sdcard/Logs/Backup_Optimizer/
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Seguro, reversível e transparente.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+
+
+---
+
+💬 Participe da Comunidade
+
+Tem feedback, bugs ou quer compartilhar o desempenho?
+
+👉 Entre no nosso Discord:
+https://discord.gg/darkanomaly
+
+
+---
+
+👨‍💻 Desenvolvedor
+
+Feito por xGlitchBruxo com sangue nos olhos e foco total em performance real.
+
+> “Menos UI, mais FPS. Menos bloat, mais poder.”
+
+
+
+
+

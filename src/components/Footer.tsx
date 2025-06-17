@@ -15,7 +15,7 @@ const Footer = () => {
             </p>
             <div className="mt-4">
               <span className="text-tech-yellow font-mono text-xs">
-                v2.1.0 - BRUTAL EDITION
+                v1.0.0 - BRUTAL EDITION
               </span>
             </div>
           </div>

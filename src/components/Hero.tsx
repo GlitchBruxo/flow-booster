@@ -64,16 +64,28 @@ const Hero = () => {
         {/* Command preview */}
         <div className="code-block max-w-4xl mx-auto mb-8 text-left">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-tech-yellow font-mono text-xs">$ EXECUÇÃO DIRETA VIA CURL - SEM DOWNLOAD</span>
-            <CopyButton text='sh -c "$(curl -fsSL https://dub.sh/flowbooster)" -- --boost' />
+            <span className="text-tech-yellow font-mono text-xs">$ DOWNLOAD E EXECUÇÃO NO BREVENT/TERMUX</span>
+            <CopyButton text='sh /sdcard/Download/bomba.sh --boost' />
           </div>
           <code className="text-tech-green text-xs">
-            sh -c "$(curl -fsSL https://dub.sh/flowbooster)" -- --boost<span className="terminal-cursor"></span>
+            sh /sdcard/Download/bomba.sh --boost<span className="terminal-cursor"></span>
           </code>
         </div>
 
-        {/* GitHub Button */}
+        {/* Download Button Prominente */}
         <div className="mb-8">
+          <Button 
+            className="brutal-button text-base px-8 py-4 mr-4"
+            onClick={() => {
+              const link = document.createElement('a');
+              link.href = 'https://dub.sh/flowbooster';
+              link.download = 'bomba.sh';
+              link.click();
+            }}
+          >
+            📥 DOWNLOAD BOMBA.SH
+          </Button>
+          
           <Button 
             className="brutal-button text-base px-8 py-4 mr-4"
             onClick={() => {
@@ -87,13 +99,10 @@ const Hero = () => {
             variant="outline"
             className="brutal-button-secondary text-base px-8 py-4"
             onClick={() => {
-              const link = document.createElement('a');
-              link.href = 'https://dub.sh/flowbooster';
-              link.download = 'bomba.sh';
-              link.click();
+              window.location.href = '/docs';
             }}
           >
-            DOWNLOAD SCRIPT
+            VER DOCUMENTAÇÃO
           </Button>
         </div>
 
@@ -112,8 +121,8 @@ const Hero = () => {
             <p className="text-sm text-tech-white">Tudo salvo em /sdcard/Logs/</p>
           </div>
           <div className="bg-tech-dark border border-tech-green p-4">
-            <h3 className="font-mono font-bold text-tech-green mb-2">EXECUÇÃO DIRETA</h3>
-            <p className="text-sm text-tech-white">Via curl - sem download necessário</p>
+            <h3 className="font-mono font-bold text-tech-green mb-2">COMPATÍVEL BREVENT</h3>
+            <p className="text-sm text-tech-white">Execução direta sem curl</p>
           </div>
         </div>
 
@@ -154,19 +163,19 @@ const Hero = () => {
           <div className="bg-tech-black border border-tech-green p-3">
             <h4 className="text-tech-green font-mono text-sm font-bold mb-2">PERFIL GAMER</h4>
             <div className="code-block text-xs bg-tech-dark border-0 p-2">
-              <code className="text-tech-green">--gamer</code>
+              <code className="text-tech-green">sh bomba.sh --gamer</code>
             </div>
           </div>
           <div className="bg-tech-black border border-tech-yellow p-3">
             <h4 className="text-tech-yellow font-mono text-sm font-bold mb-2">ECONOMIA BATERIA</h4>
             <div className="code-block text-xs bg-tech-dark border-0 p-2">
-              <code className="text-tech-green">--battery</code>
+              <code className="text-tech-green">sh bomba.sh --battery</code>
             </div>
           </div>
           <div className="bg-tech-black border border-tech-blue p-3">
             <h4 className="text-tech-blue font-mono text-sm font-bold mb-2">MINIMAL DEV</h4>
             <div className="code-block text-xs bg-tech-dark border-0 p-2">
-              <code className="text-tech-green">--minimal</code>
+              <code className="text-tech-green">sh bomba.sh --minimal</code>
             </div>
           </div>
         </div>

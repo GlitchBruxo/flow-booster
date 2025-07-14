@@ -8,83 +8,100 @@ const Execution = () => {
     <section id="execution" className="py-20 px-4 bg-tech-dark">
       <div className="container max-w-5xl mx-auto">
         <h2 className="text-3xl md:text-5xl font-black text-tech-white mb-12 font-mono glitch-text">
-          [EXEMPLOS DE USO]
+          [COMO USAR - BREVENT/TERMUX]
         </h2>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Execução Direta */}
+          {/* Método Principal - Download */}
           <div className="border border-tech-green bg-tech-black p-6">
             <h3 className="text-tech-green font-mono font-bold text-xl mb-4 flex items-center">
-              <span className="mr-2">🚀</span> EXECUÇÃO DIRETA (RECOMENDADO)
+              <span className="mr-2">🚀</span> MÉTODO PRINCIPAL (RECOMENDADO)
             </h3>
             
             <div className="space-y-4">
+              <div className="mb-4">
+                <p className="text-tech-white text-sm mb-2">1. Baixe o script:</p>
+                <div className="flex gap-2">
+                  <button
+                    className="brutal-button text-sm px-4 py-2"
+                    onClick={() => {
+                      const link = document.createElement('a');
+                      link.href = githubUrl;
+                      link.download = 'bomba.sh';
+                      link.click();
+                    }}
+                  >
+                    📥 DOWNLOAD BOMBA.SH
+                  </button>
+                </div>
+              </div>
+              
               <div className="code-block">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-tech-yellow font-mono text-xs">OTIMIZAÇÃO TOTAL</span>
-                  <CopyButton text={`sh -c "$(curl -fsSL ${githubUrl})" -- --boost`} />
+                  <span className="text-tech-yellow font-mono text-xs">2. OTIMIZAÇÃO TOTAL</span>
+                  <CopyButton text="sh /sdcard/Download/bomba.sh --boost" />
                 </div>
                 <code className="text-tech-green text-xs break-all">
-                  sh -c "$(curl -fsSL {githubUrl})" -- --boost
+                  sh /sdcard/Download/bomba.sh --boost
                 </code>
               </div>
               
               <div className="code-block">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-tech-yellow font-mono text-xs">MODO GAMER</span>
-                  <CopyButton text={`sh -c "$(curl -fsSL ${githubUrl})" -- --gamer`} />
+                  <CopyButton text="sh /sdcard/Download/bomba.sh --gamer" />
                 </div>
                 <code className="text-tech-green text-xs break-all">
-                  sh -c "$(curl -fsSL {githubUrl})" -- --gamer
+                  sh /sdcard/Download/bomba.sh --gamer
                 </code>
               </div>
               
               <div className="code-block">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-tech-yellow font-mono text-xs">RESTAURAR TUDO</span>
-                  <CopyButton text={`sh -c "$(curl -fsSL ${githubUrl})" -- --reverse`} />
+                  <CopyButton text="sh /sdcard/Download/bomba.sh --reverse" />
                 </div>
                 <code className="text-tech-green text-xs break-all">
-                  sh -c "$(curl -fsSL {githubUrl})" -- --reverse
+                  sh /sdcard/Download/bomba.sh --reverse
                 </code>
               </div>
             </div>
           </div>
           
-          {/* Download Local */}
+          {/* Localização Personalizada */}
           <div className="border border-tech-blue bg-tech-black p-6">
             <h3 className="text-tech-blue font-mono font-bold text-xl mb-4 flex items-center">
-              <span className="mr-2">💾</span> DOWNLOAD PARA USO LOCAL
+              <span className="mr-2">📁</span> LOCALIZAÇÃO PERSONALIZADA
             </h3>
             
             <div className="space-y-4">
               <div className="code-block">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-tech-yellow font-mono text-xs">BAIXAR SCRIPT</span>
-                  <CopyButton text={`curl -fsSL ${githubUrl} -o /sdcard/flowbooster.sh`} />
+                  <span className="text-tech-yellow font-mono text-xs">MOVER PARA /SDCARD</span>
+                  <CopyButton text="mv /sdcard/Download/bomba.sh /sdcard/" />
                 </div>
                 <code className="text-tech-green text-xs break-all">
-                  curl -fsSL {githubUrl} -o /sdcard/flowbooster.sh
+                  mv /sdcard/Download/bomba.sh /sdcard/
                 </code>
               </div>
               
               <div className="code-block">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-tech-yellow font-mono text-xs">DAR PERMISSÃO</span>
-                  <CopyButton text="chmod +x /sdcard/flowbooster.sh" />
+                  <CopyButton text="chmod +x /sdcard/bomba.sh" />
                 </div>
                 <code className="text-tech-green text-xs">
-                  chmod +x /sdcard/flowbooster.sh
+                  chmod +x /sdcard/bomba.sh
                 </code>
               </div>
               
               <div className="code-block">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-tech-yellow font-mono text-xs">EXECUTAR LOCAL</span>
-                  <CopyButton text="sh /sdcard/flowbooster.sh --boost" />
+                  <span className="text-tech-yellow font-mono text-xs">EXECUTAR</span>
+                  <CopyButton text="sh /sdcard/bomba.sh --boost" />
                 </div>
                 <code className="text-tech-green text-xs">
-                  sh /sdcard/flowbooster.sh --boost
+                  sh /sdcard/bomba.sh --boost
                 </code>
               </div>
             </div>
@@ -100,7 +117,7 @@ const Execution = () => {
           <div className="bg-tech-black border border-tech-green p-6">
             <div className="code-block bg-transparent border-0 p-0">
               <div className="text-tech-yellow font-mono text-sm mb-4">
-                usuario@android:~$ sh -c "$(curl -fsSL {githubUrl})" -- --boost
+                usuario@android:~$ sh /sdcard/Download/bomba.sh --boost
               </div>
               
               <div className="font-mono text-xs space-y-1 text-tech-green">
@@ -168,6 +185,16 @@ const Execution = () => {
               </tbody>
             </table>
           </div>
+        </div>
+        
+        {/* Warning sobre Brevent */}
+        <div className="mt-8 p-4 border border-tech-yellow bg-tech-dark/50">
+          <h4 className="text-tech-yellow font-mono font-bold mb-2">💡 IMPORTANTE PARA BREVENT:</h4>
+          <p className="text-tech-white font-mono text-sm">
+            • Sempre faça DOWNLOAD do script primeiro<br/>
+            • Evite comandos curl no Brevent (podem causar problemas)<br/>
+            • Use a pasta Download ou mova para /sdcard/ conforme preferir
+          </p>
         </div>
       </div>
     </section>

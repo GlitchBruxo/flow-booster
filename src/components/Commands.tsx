@@ -8,57 +8,51 @@ const Commands = () => {
     {
       flag: '--boost',
       description: 'Otimização total: desbloat + tweaks + DNS + RAM Plus + darkmode',
-      example: `sh -c "$(curl -fsSL ${githubUrl})" -- --boost`,
+      example: 'sh /sdcard/Download/bomba.sh --boost',
       category: 'performance',
       highlight: true
     },
     {
       flag: '--reverse',
       description: 'Restaura configurações e apps removidos',
-      example: `sh -c "$(curl -fsSL ${githubUrl})" -- --reverse`,
+      example: 'sh /sdcard/Download/bomba.sh --reverse',
       category: 'safety'
     },
     {
       flag: '--gamer',
       description: 'Modo gamer: tweaks para latência, desempenho e resposta',
-      example: `sh -c "$(curl -fsSL ${githubUrl})" -- --gamer`,
+      example: 'sh /sdcard/Download/bomba.sh --gamer',
       category: 'performance'
     },
     {
       flag: '--battery',
       description: 'Foco em economia de bateria',
-      example: `sh -c "$(curl -fsSL ${githubUrl})" -- --battery`,
+      example: 'sh /sdcard/Download/bomba.sh --battery',
       category: 'power'
     },
     {
       flag: '--minimal',
       description: 'Desativa notificações, animações, luzes e efeitos',
-      example: `sh -c "$(curl -fsSL ${githubUrl})" -- --minimal`,
+      example: 'sh /sdcard/Download/bomba.sh --minimal',
       category: 'cleanup'
     },
     {
       flag: '--desbloat',
       description: 'Remove apps desnecessários por marca (Xiaomi, Samsung, Motorola)',
-      example: `sh -c "$(curl -fsSL ${githubUrl})" -- --desbloat`,
+      example: 'sh /sdcard/Download/bomba.sh --desbloat',
       category: 'cleanup'
     },
     {
       flag: '--dns',
       description: 'Ativa DNS privado com dns.adguard.com',
-      example: `sh -c "$(curl -fsSL ${githubUrl})" -- --dns`,
+      example: 'sh /sdcard/Download/bomba.sh --dns',
       category: 'network'
     },
     {
       flag: '--darkmode',
       description: 'Força modo escuro (se compatível)',
-      example: `sh -c "$(curl -fsSL ${githubUrl})" -- --darkmode`,
+      example: 'sh /sdcard/Download/bomba.sh --darkmode',
       category: 'system'
-    },
-    {
-      flag: '--download',
-      description: 'Baixa o script para uso local em /sdcard/flowbooster.sh',
-      example: `curl -fsSL ${githubUrl} -o /sdcard/flowbooster.sh`,
-      category: 'info'
     }
   ];
 
@@ -79,9 +73,24 @@ const Commands = () => {
           [COMANDOS SUPORTADOS]
         </h2>
         
-        <p className="text-tech-green font-mono mb-12 text-lg">
-          🔥 Execute diretamente via curl - sem instalação necessária
+        <p className="text-tech-green font-mono mb-4 text-lg">
+          🔥 Baixe primeiro, execute depois - compatível com Brevent
         </p>
+        
+        {/* Download Button */}
+        <div className="mb-8 text-center">
+          <button
+            className="brutal-button text-base px-8 py-4"
+            onClick={() => {
+              const link = document.createElement('a');
+              link.href = githubUrl;
+              link.download = 'bomba.sh';
+              link.click();
+            }}
+          >
+            📥 DOWNLOAD BOMBA.SH
+          </button>
+        </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {commands.map((cmd, index) => (
@@ -120,20 +129,20 @@ const Commands = () => {
             </h3>
             <ul className="text-tech-white text-sm font-mono space-y-2">
               <li>→ Android 8+</li>
-              <li>→ Termux ou Brevent (sem root)</li>
-              <li>→ Conexão com internet</li>
+              <li>→ Termux ou Brevent</li>
+              <li>→ Download do script bomba.sh</li>
               <li>→ Autorização de acesso ao /sdcard</li>
             </ul>
           </div>
           
           <div className="border border-tech-blue bg-tech-dark p-6">
             <h3 className="text-tech-blue font-mono font-bold text-xl mb-4">
-              🧠 SEGURANÇA
+              🧠 COMPATIBILIDADE BREVENT
             </h3>
             <ul className="text-tech-white text-sm font-mono space-y-2">
-              <li>→ Não exige root</li>
-              <li>→ Não coleta dados</li>
-              <li>→ Apenas ajustes via settings/pm</li>
+              <li>→ Execução via download (sem curl)</li>
+              <li>→ Compatível com todas as versões</li>
+              <li>→ Logs detalhados em /sdcard/Logs</li>
               <li>→ Reversível via --reverse</li>
             </ul>
           </div>
